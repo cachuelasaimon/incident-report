@@ -7,3 +7,4 @@ export { default as Reviews } from './Reviews';
 export { default as StyledRating } from './StyledRating';
 export { default as Cart } from './Cart';
 export { default as QRGenerator } from './QRGenerator';
+export { default as QRScanner } from './QRScanner';
