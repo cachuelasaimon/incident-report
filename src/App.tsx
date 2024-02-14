@@ -14,7 +14,16 @@ import '@fontsource/poppins/700.css';
 import QrCode from './pages/Student/QrCode';
 
 import { WithAuth } from '~/layouts';
-import { ForgotPassword, Login, NotFound, SignUp } from '~/pages';
+import {
+  AddStaffForm,
+  AddStudentForm,
+  ForgotPassword,
+  IncidentReportForm,
+  Login,
+  NotFound,
+  ScanQR,
+  SignUp,
+} from '~/pages';
 import CustomTheme from '~/theme';
 import { IPage } from '~/types';
 
@@ -32,10 +41,27 @@ const Pages: IPage[] = [
     requireAuth: false,
     requireAdmin: false,
   },
+
+  // ? Admin Forms
   {
-    path: '/student/qr-code',
-    Component: QrCode,
+    path: '/admin/forms/incident-report',
+    Component: IncidentReportForm,
     requireAuth: true,
+    // ! REQUIRE ADMIN
+    requireAdmin: false,
+  },
+  {
+    path: '/admin/forms/add-staff',
+    Component: AddStaffForm,
+    requireAuth: true,
+    // ! REQUIRE ADMIN
+    requireAdmin: false,
+  },
+  {
+    path: '/admin/forms/add-student',
+    Component: AddStudentForm,
+    requireAuth: true,
+    // ! REQUIRE ADMIN
     requireAdmin: false,
   },
   // {

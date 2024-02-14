@@ -8,3 +8,7 @@ export { default as EmployeeList } from './EmployeeList';
 export { default as PersonalInfo } from './PersonalInfo';
 export { default as FamilyBg } from './FamilyBg';
 export { default as EducationForm } from './EducationForm';
+export { default as ScanQR } from './ScanQR';
+
+// ? Admin Forms
+export * from './Forms';

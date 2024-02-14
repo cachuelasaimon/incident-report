@@ -34,13 +34,26 @@ interface ICollections {
   users: ICollection;
   employees: ICollection;
   endorsements: ICollection;
+  students: ICollection;
+  incidents: ICollection;
 }
 
 export const collections: ICollections = {
+  // ? Shared Collections
   companyInfo: {
     ref: doc(database, `${db_dev}`),
     string: 'test',
   },
+  users: {
+    ref: collection(database, `${db_dev}/users`),
+    string: `${db_dev}/users`,
+  },
+  employees: {
+    ref: collection(database, `${db_dev}/employees`),
+    string: `${db_dev}/employees`,
+  },
+
+  // ? Ecommerce Collections
   addresses: {
     ref: collection(database, `${db_dev}/address`),
     string: `${db_dev}/address`,
@@ -57,16 +70,18 @@ export const collections: ICollections = {
     ref: collection(database, `${db_dev}/products`),
     string: `${db_dev}/products`,
   },
-  users: {
-    ref: collection(database, `${db_dev}/users`),
-    string: `${db_dev}/users`,
-  },
-  employees: {
-    ref: collection(database, `${db_dev}/employees`),
-    string: `${db_dev}/employees`,
-  },
   endorsements: {
     ref: collection(database, `${db_dev}/endorsements`),
     string: `${db_dev}/endorsements`,
+  },
+
+  // ? Incident Report Collections
+  students: {
+    ref: collection(database, `${db_dev}/students`),
+    string: `${db_dev}/students`,
+  },
+  incidents: {
+    ref: collection(database, `${db_dev}/incidents`),
+    string: `${db_dev}/incidents`,
   },
 };
